@@ -1,90 +1,73 @@
-import {
-  Box,
-  Heading,
-  Text,
-  HStack,
-  Divider,
-  Center,
-  VStack,
-} from "@chakra-ui/react";
-import heroIllustration from "../../assets/hero-illustration.png";
+import { Box, Heading, HStack, IconButton, Icon } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 
-const Hero = () => {
+import { FaFacebookF, FaInstagram, FaLinkedin, FaPlus } from "react-icons/fa";
+
+const SocialNetworks = () => {
   const theme = useTheme();
   const paddingX = theme.space.paddingX;
   const paddingY = theme.space.paddingY;
 
   return (
     <Box
-      id="hero"
+      position="relative"
       paddingX={paddingX}
       paddingY={paddingY}
-      color="black"
-      minHeight={["calc(100vh - 68px)", "100vh", "100vh"]}
+      minHeight={["68px", "68px", "68px"]}
       display="flex"
-      flexDirection="column"
-      alignItems="start"
-      justifyContent="space-evenly"
+      flexDirection="row"
+      alignItems="center"
+      justifyContent="space-between"
+      gap={["12px", "12px", "12px"]}
+      bgColor="brand.oxfordBlue"
+      color="white"
     >
-      <VStack spacing={5} align="start">
-        <VStack align="start">
-          <Heading
-            as="h1"
-            fontWeight="bold"
-            fontSize={["4xl", "5xl", "6xl"]}
-            textAlign="left"
-          >
-            Najbolje od
-            <br />
-            najboljih.
-          </Heading>
-          <Text fontSize={["sm", "lg", "xl"]} color="gray.500">
-            Lepeza zadovoljnih klijenata iz Niša i okoline svedoči o
-            višegodišnjem unapređenju kvaliteta u razvoju poslovanja preduzeća.
-          </Text>
-        </VStack>
-        <HStack width="full" justify="start" spacing={[4, 6, 8]}>
-          <HStack spacing={[2, 4, 8]}>
-            <Text fontSize={["3xl", "4xl", "5xl"]} fontWeight="medium">
-              20+
-            </Text>
-            <Text fontSize={["xs", "md", "lg"]} lineHeight={["xs", "md", "lg"]}>
-              godina
-              <br />
-              iskustva
-            </Text>
-          </HStack>
-          <Center height="64px">
-            <Divider
-              opacity={1}
-              orientation="vertical"
-              borderColor="brand.darkRaspberry"
-              borderLeftWidth="16px"
-            />
-          </Center>
-          <HStack spacing={[4, 4, 8]}>
-            <Text fontSize={["3xl", "4xl", "5xl"]} fontWeight="medium">
-              30+
-            </Text>
-            <Text fontSize={["xs", "md", "lg"]} lineHeight={["xs", "md", "lg"]}>
-              aktivnih
-              <br />
-              klijenata
-            </Text>
-          </HStack>
-        </HStack>
-      </VStack>
-
-      <Box display="flex" justifyContent="center" alignItems="center">
-        <img
-          src={heroIllustration}
-          alt="Illustration"
-          style={{ width: "100%", maxWidth: "600px" }}
+      <Icon
+        top={2}
+        left={2}
+        position="absolute"
+        as={FaPlus}
+        boxSize={["16px", "16px", "16px"]}
+      />
+      <Heading
+        as="h2"
+        fontWeight="bold"
+        fontSize={["sm", "2xl", "3xl"]}
+        textAlign="left"
+      >
+        Pratite nas na društvenim mrežama
+      </Heading>
+      <HStack>
+        <IconButton
+          isRound={true}
+          variant="solid"
+          size="sm"
+          bgColor="#2563EB"
+          aria-label="Done"
+          fontSize={["16px", "16px", "16px"]}
+          icon={<FaFacebookF />}
         />
-      </Box>
+        <IconButton
+          isRound={true}
+          variant="solid"
+          size="sm"
+          bgColor="#1E293B"
+          aria-label="Done"
+          fontSize={["16px", "16px", "16px"]}
+          icon={<FaInstagram />}
+        />
+        <IconButton
+          isRound={true}
+          variant="solid"
+          bgColor="#1E293B"
+          size="sm"
+          aria-label="Done"
+          fontSize={["16px", "16px", "16px"]}
+          icon={<FaLinkedin />}
+        />
+      </HStack>
     </Box>
   );
 };
 
-export default Hero;
+export default SocialNetworks;

@@ -3,11 +3,11 @@ import { extendTheme } from "@chakra-ui/react";
 // Colors
 const colors = {
   brand: {
-    darkRaspberry: "#5a0d39",
-    cobaltBlue: "#2f5cad",
-    oxfordBlue: "#0f172a",
-    eerieBlack: "18181b",
-    gunmetalGray: "#52525b",
+    darkRaspberry: "#5A0D39",
+    cobaltBlue: "#2F5CAD",
+    oxfordBlue: "#0F172A",
+    eerieBlack: "18181B",
+    gunmetalGray: "#52525B",
   },
 };
 
@@ -44,10 +44,10 @@ const lineHeights = {
   "2xl": "2rem", // 32px
   "3xl": "2.25rem", // 36px
   "4xl": "2.5rem", // 40px
-  "5xl": "1", // 48px
-  "6xl": "1", // 60px
-  "7xl": "1", // 72px
-  "8xl": "1", // 96px
+  "5xl": "2.75rem", // 44px
+  "6xl": "3rem", // 60px
+  "7xl": "4rem", // 66px
+  "8xl": "4.5", // 72px
   "9xl": "1", // 128px
 };
 

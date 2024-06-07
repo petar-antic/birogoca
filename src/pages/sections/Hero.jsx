@@ -26,7 +26,7 @@ const Hero = () => {
       display="flex"
       flexDirection="column"
       alignItems="start"
-      justifyContent="space-evenly"
+      justifyContent="space-between"
     >
       <VStack spacing={5} align="start">
         <VStack align="start">
